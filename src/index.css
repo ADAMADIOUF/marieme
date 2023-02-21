@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&family=Henny+Penny&family=Lato:wght@100;300;400&family=League+Spartan:wght@200;300;400;500&family=Montserrat:wght@100;200;300;400&family=Poppins:wght@100;200;300&family=Roboto+Mono:wght@100;200;300&family=Titillium+Web:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Babylonica&family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,700&family=Calligraffitti&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Henny+Penny&family=Lato:wght@100;300;400&family=League+Spartan:wght@200;300;400;500&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@100;200;300;400&family=Nunito:wght@200;400&family=Poppins:wght@100;200;300&display=swap');
 
 :root {
   /* dark shades of primary color*/
@@ -26,7 +26,24 @@
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --max-width: 1170px;
   --fixed-width: 620px;
-  --font-primary:'Calligraffitti', cursive;
+ --primary-font1: 'Lato', sans-serif;
+  --primary-font2: 'Merriweather', serif;
+  --primary-font3: 'Montserrat' sans-serif;
+  --primary-font4: 'Oswald', sans-serif;
+  --primary-font5: 'Playfair Display', serif;
+  --primary-font6: 'Raleway', sans-serif;
+  --primary-font7: 'Rubik Microbe', cursive;
+  --primary-font8: 'Rubik Moonrocks', cursive;
+  --primary-font9: 'Anton', sans-serif;
+  --primary-font10: 'Babylonica', cursive;
+  --primary-font11: 'Bodoni Moda', serif;
+  --primary-font12:  'Calligraffitti', cursive;
+  --primary-font13: 'EB Garamond', serif;
+  --primary-font14:'Henny Penny', cursive;
+  --primary-font15:'League Spartan', sans-serif;
+  --primary-font16:'Libre Baskerville', serif;
+  --primary-font17:'Nunito', sans-serif;
+  --primary-font18:'Poppins', sans-serif;
 }
 /*
 =============== 
@@ -43,7 +60,7 @@ Global Styles
   
 }
 body {
-  font-family:var(--font-primary);
+  font-family:var(--primary-font13);
   background: var(--clr-white);
   color: var(--clr-grey-1);
   line-height: 1.5;

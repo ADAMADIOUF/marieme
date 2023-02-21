@@ -50,7 +50,7 @@ const Wrapper = styled.div`
     .progress-bar {
       display: grid;
       gap: 5rem;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 `

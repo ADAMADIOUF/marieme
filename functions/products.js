@@ -24,7 +24,6 @@ exports.handler = async (event, context, cb) => {
         img: url,
       }
     })
-    console.log(products)
     return {
       statusCode: 200,
       body: JSON.stringify(products),

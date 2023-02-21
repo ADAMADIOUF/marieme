@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import img1 from "../assets/about.jpeg"
-import img2 from '../assets/sall1.png'
-import logo from '../assets/footerl.png'
+import img1 from "../assets/about1.png"
+import img2 from '../assets/sall2.png'
+
 const AboutPage = () => {
   return (
     <Wrapper>
@@ -13,7 +13,7 @@ const AboutPage = () => {
         <div className='about-container'>
           <article className='about-first-img'>
             <img src={img2} alt='' />
-            <img src={logo} alt="rems' clamour" className='logo-img' />
+            
           </article>
           <article className='about-details'>
             <p>
@@ -34,9 +34,10 @@ const AboutPage = () => {
 const Wrapper = styled.section`
   .about {
     position: relative;
+    margin-top:5rem;
   }
   .about-details p {
-    color:#fff;
+    color: #000;
   }
   .about-img {
     position: relative;
@@ -48,13 +49,8 @@ const Wrapper = styled.section`
   .about-first-img img {
     width: 100%;
   }
-  .about-container {
-    position: absolute;
-    top: 0%;
-    left: 30%;
-  }
-  .logo-img{
-    
+  .about-container{
+    margin-top:5rem;
   } @media (min-width: 992px) {
     .about-container {
       display: grid;

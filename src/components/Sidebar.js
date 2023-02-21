@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { FaTimes } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import { links } from '../utils/constant'
-import logo from '../assets/logo.png'
+import logo from '../assets/remslogo1.png'
 
 const Sidebar = () => {
   const { closeSidebar, isSidebarOpen } = useProductsContext()
@@ -13,7 +13,7 @@ const Sidebar = () => {
     <SidebarContainer>
       <aside className={isSidebarOpen ? 'show-sidebar sidebar' : 'sidebar'}>
         <div className='sidebar-header'>
-          <img src={logo} alt="rems' clamour" />
+          <img src={logo} alt="rems' clamour" className='logo' />
           <button type='button' className='close-btn' onClick={closeSidebar}>
             <FaTimes />
           </button>
@@ -23,9 +23,9 @@ const Sidebar = () => {
             const { id, text, url } = link
             return (
               <li key={id}>
-                <Link to={url} onClick={closeSidebar}>
+                <a href={url} onClick={closeSidebar}>
                   {text}
-                </Link>
+                </a>
               </li>
             )
           })}

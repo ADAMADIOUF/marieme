@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import img1 from "../assets/review.jpeg"
+import img1 from "../assets/br.png"
 import styled from 'styled-components'
 import data from './../dataReviews'
 
@@ -77,11 +77,8 @@ const Wrapper = styled.section`
     height: 500px;
   }
   .reviews {
-    position: absolute;
-    background: #fff;
-    top: 30%;
-    left: 10%;
-    margin-top: -5rem;
+   
+  
   }
   .review-info {
     margin-top: 5rem;

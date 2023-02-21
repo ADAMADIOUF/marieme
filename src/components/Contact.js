@@ -1,8 +1,9 @@
 import React from 'react'
 
+import { motion } from 'framer-motion'
 import styled from 'styled-components'
 import logo from '../assets/footerl.png'
-import img1 from "../assets/contactt.jpeg"
+import img1 from "../assets/contact.png"
 import img2 from '../assets/contcat1l.png'
 import img3 from '../assets/contactl2.png'
 import img4 from '../assets/locationl3.png'
@@ -16,9 +17,27 @@ const Contact = () => {
           <img src={img1} alt='' />
         </div>
         <div className='contact-details'>
-          <h2>cosmétique bio</h2>
-          <h3>contactez nous </h3>
-          <h5>Rem's Clamour</h5>
+          <motion.h2
+            initial={{ x: 1000, scale: 0.5 }}
+            animate={{ x: 0, scale: 1 }}
+            transition={{ duration: 1 }}
+          >
+            cosmétique bio
+          </motion.h2>
+          <motion.h3
+            initial={{ x: -1000, scale: 0.5 }}
+            animate={{ x: 0, scale: 1 }}
+            transition={{ duration: 1 }}
+          >
+            contactez nous{' '}
+          </motion.h3>
+          <motion.h5
+            initial={{ x: 1000, scale: 0.5 }}
+            animate={{ x: 0, scale: 1 }}
+            transition={{ duration: 1 }}
+          >
+            Rem's Clamour
+          </motion.h5>
         </div>
         <div className=' section-center contact-address-container'>
           <article>
@@ -88,6 +107,9 @@ const Contact = () => {
   )
 }
 const Wrapper = styled.section`
+.contact{
+  margin-top:5rem;
+}
   .form-contact h3 {
     color: var(--clr-primary-1);
     text-align: center;
@@ -106,7 +128,7 @@ const Wrapper = styled.section`
     left: 30%;
   }
   .contact-details h2 {
-    color: #fff;
+    color: #000;
     font-size: 2rem;
   }
   .contact-details h3 {
@@ -123,6 +145,13 @@ const Wrapper = styled.section`
   .contact-address-container img {
     width: 150px;
     height: 150px;
+  }
+  @media screen and (min-width: 425px) {
+    .contact-address-container {
+      display: grid;
+      gap: 5rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
   @media screen and (min-width: 992px) {
     .contact-address-container {
@@ -159,6 +188,8 @@ const Wrapper = styled.section`
     background: var(--clr-primary-1);
     cursor: pointer;
     transition: var(--transition);
+    margin:0 auto;
+    display:block;
   }
   .btn-contact:hover {
     background: var(--clr-black);

@@ -1,5 +1,5 @@
-import React from 'react'
-import logo from "../assets/logo.png"
+import React,{useState,useEffect} from 'react'
+import logo from "../assets/remslogo1.png"
 import styled from 'styled-components'
 import { FaBars } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
@@ -8,30 +8,49 @@ import { links } from '../utils/constant'
 import { useProductsContext } from '../context/products_context'
 
 const Navbar = () => {
+    const [scrolled, setScrolled] = useState(false)
+    const handleScroll = () => {
+      const offset = window.scrollY
+      if (offset > 200) {
+        setScrolled(true)
+      } else {
+        setScrolled(false)
+      }
+    }
+
+    useEffect(() => {
+      window.addEventListener('scroll', handleScroll)
+    })
+    let navbarClasses = ['navbar']
+    if (scrolled) {
+      navbarClasses.push('scrolled')
+    }
+
   const { openSidebar } = useProductsContext()
   return (
     <NavContainer>
-      <div className='nav-center'>
-        <div className='nav-header'>
-          <Link to={`/`}>
-           <img src={logo} alt="rems' clamour" />
-          </Link>
-          <button type='button' className="nav-toggle" onClick={openSidebar}>
-           <FaBars/>
-          </button>
+      <header className={navbarClasses.join(' ')}>
+        <div className='nav-center'>
+          <div className='nav-header'>
+            <a href={`/`}>
+              <img src={logo} alt="rems' clamour" className='logo' />
+            </a>
+            <button type='button' className='nav-toggle' onClick={openSidebar}>
+              <FaBars />
+            </button>
+          </div>
+          <ul className='nav-links'>
+            {links.map((link) => {
+              const { id, text, url } = link
+              return (
+                <li key={id}>
+                  <a href={url}>{text}</a>
+                </li>
+              )
+            })}
+          </ul>
         </div>
-        <ul className="nav-links">
-         {links.map((link)=>{
-          const{id,text,url}= link
-          return<li key={id}>
-           <Link to={url}>
-            {text}
-           </Link>
-          </li>
-         })}
-        </ul>
-       
-      </div>
+      </header>
     </NavContainer>
   )
 }
@@ -50,10 +69,10 @@ const NavContainer = styled.nav`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    img {
-      width: 175px;
-      margin-left: -15px;
-    }
+    
+  }
+  .logo{
+    width:10rem;
   }
   .nav-toggle {
     background: transparent;
@@ -87,7 +106,7 @@ const NavContainer = styled.nav`
       }
       a {
         color: var(--clr-grey-3);
-        font-size: 1rem;
+        font-size: 2rem;
         text-transform: capitalize;
         letter-spacing: var(--spacing);
         padding: 0.5rem;
@@ -99,6 +118,17 @@ const NavContainer = styled.nav`
     .cart-btn-wrapper {
       display: grid;
     }
+  }
+  .scrolled {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10rem;
+    background: var(--clr-white);
+    z-index: 2;
+    box-shadow: var(--light-shadow);
+    
   }
 `
 export default Navbar

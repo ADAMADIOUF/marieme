@@ -71,8 +71,8 @@ const Wrapper = styled.section`
     color: var(--clr-primary-1);
   }
   .footer-img img {
-    width: 150px;
-    height: 150px;
+    width: 5rem;
+    height: 5rem;
     border: 1px solid var(--clr-primary-1);
     border-radius: 50%;
   }

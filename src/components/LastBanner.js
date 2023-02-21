@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import img1 from '../assets/banner5.jpeg'
+import img1 from '../assets/b1.png'
 import FeaturedTwo from './FeaturedTwo'
 import ProductTwo from './ProductTwo'
 const LastBanner = () => {

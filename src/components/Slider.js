@@ -75,8 +75,7 @@ const Wrapper = styled.section`
     overflow: hidden;
     display: flex;
     text-align: center;
-
-    margin: 2rem auto;
+    margin: 5rem auto;
   }
 
   .prev,
