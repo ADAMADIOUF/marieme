@@ -37,11 +37,14 @@ const Slider = () => {
           ) {
             slider = 'lastSlide'
           }
-          const { id, name, title, desc, image } = slide
+          const { id,  desc, image } = slide
           return (
             <div key={id}>
               <address className={slider}>
                 <img src={image} alt='' className='img-slide' />
+                <div className="slide-content">
+                  <p>{desc}</p>
+                </div>
               </address>
             </div>
           )
@@ -58,15 +61,19 @@ const Slider = () => {
 }
 
 const Wrapper = styled.section`
-  min-height: 60vh;
-  display: grid;
-  place-items: center;
+ 
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    margin-top:3rem;
+  
+
   .img-container {
     display: none;
   }
   .img-slide {
     width: 100%;
-    height: 500px;
+    height: 100vh;
   }
   .slide {
     position: relative;
@@ -75,9 +82,19 @@ const Wrapper = styled.section`
     overflow: hidden;
     display: flex;
     text-align: center;
-    margin: 5rem auto;
+    margin: 2rem auto;
   }
-
+  .slide-content {
+    position: absolute;
+    top: 30rem;
+    left: 10rem;
+    color: #fff;
+    display:none;
+  }
+  .slide-content p {
+    font-size: 3rem;
+    text-transform: uppercase;
+  }
   .prev,
   .next {
     position: absolute;
@@ -94,12 +111,12 @@ const Wrapper = styled.section`
     border-radius: var(--radius);
     cursor: pointer;
     transition: var(--transition);
-    text-transform:uppercase;
+    text-transform: uppercase;
   }
   .prev:hover,
   .next:hover {
     background: var(--clr-black);
-    color:var(--clr-white)
+    color: var(--clr-white);
   }
   .prev {
     left: 0rem;
@@ -110,7 +127,7 @@ const Wrapper = styled.section`
     text-orientation: use-glyph-orientation;
   }
   .next {
-    right: 4rem;
+    right: 3rem;
   }
 
   address {
@@ -132,11 +149,13 @@ const Wrapper = styled.section`
   address.nextSlide {
     transform: translateX(100%);
   }
-  @media (min-width: 800px) {
+  @media (min-width: 768px) {
     .text {
       max-width: 45em;
     }
-    
+     .slide-content {
+      display:flex;
+     }
   }
   @media (min-width: 992px) {
     .img-slide {
@@ -150,6 +169,10 @@ const Wrapper = styled.section`
     .next {
       top: 300px;
     }
+     .slide-content{
+      top:20rem;
+      max-width:30rem
+     }
   }
 `
 
