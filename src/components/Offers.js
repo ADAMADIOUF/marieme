@@ -10,14 +10,14 @@ const Offers = () => {
       id: 1,
       title: `Soldes d'été`,
       description: `Profitez de jusqu'à 50% de réduction sur une sélection de parfums !`,
-      image: `./images/offre1.jpeg`,
+      image: `./images/a1.jpeg`,
     },
     {
       id: 2,
       title: 'Livraison gratuite',
       description:
         'Bénéficiez de la livraison gratuite pour toute commande supérieure à 50 $ !',
-      image: './images/offre2.jpeg',
+      image: './images/a2.jpeg',
     },
     // Ajoutez d'autres offres ici
   ]
