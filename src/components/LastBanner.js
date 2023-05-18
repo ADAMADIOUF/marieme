@@ -1,21 +1,14 @@
 import React from 'react'
-import styled from 'styled-components'
-import img1 from '../assets/b1.png'
-import FeaturedTwo from './FeaturedTwo'
-import ProductTwo from './ProductTwo'
-const LastBanner = () => {
+import s from '../assets/s.png'
+import { Link } from 'react-router-dom'
+const SecondBanner = () => {
   return (
-    <Wrapper>
-      <div className='last-banner'>
-        <img src={img1} alt='' />
-      </div>
-      <FeaturedTwo />
-    </Wrapper>
+    <div className='second-banner'>
+      <Link to={`/perfumes`}>
+        <img src={s} alt='' className='second-banner-img' />
+      </Link>
+    </div>
   )
 }
-const Wrapper = styled.article`
-.last-banner img{
- width:100%
-}
-`
-export default LastBanner
+
+export default SecondBanner

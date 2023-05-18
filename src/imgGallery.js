@@ -2,25 +2,21 @@ const gallery = [
   {
     id: 1,
     image:
-      'https://media.istockphoto.com/id/1217970105/photo/set-of-beauty-products-mockup.jpg?s=612x612&w=0&k=20&c=27Z_kjOXvQOetl-7dPoqRlt4JCg422a5gBRWgLbkwO0=',
-    
+      'https://www.guerlain.com/dw/image/v2/BDCZ_PRD/on/demandware.static/-/Sites-GSA_master_catalog/default/dw9cb859b6/Secondary_visuals_2/2021/A&M/AM_SECONDARY-VISUAL_PRODUCT-PAGE_ROSE-BARBARE.jpg?sw=700&sh=700',
   },
   {
     id: 2,
     image:
-      'https://sneakernews.com/wp-content/uploads/2022/04/ebay-april-2022-350-banner.jpg',
-   
+      'https://www.guerlain.com/dw/image/v2/BDCZ_PRD/on/demandware.static/-/Sites-GSA_master_catalog/default/dw559da8fb/Secondary_visuals_2/2021/A&M/AM_SECONDARY-VISUAL_PRODUCT-PAGE_ROSE-CHERIE.jpg?sw=700&sh=700',
   },
   {
     id: 3,
-    image: 'https://m.media-amazon.com/images/I/41PBggHRg+L._AC_.jpg',
-    
+    image:
+      'https://media.karousell.com/media/photos/products/2022/6/18/guerlain_rose_cherie_1655569709_79325d21.jpg',
   },
   {
     id: 4,
-    image:
-      'https://i.pinimg.com/originals/48/d5/df/48d5dfbf7919efc9637aad7556310c80.jpg',
-    
+    image: 'https://www.artisanparfumeur.com/images/product/main/_template.png',
   },
 ]
 export default gallery

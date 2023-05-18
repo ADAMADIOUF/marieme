@@ -1,87 +1,64 @@
 import React from 'react'
-import styled from 'styled-components'
-import { GrFacebookOption } from 'react-icons/gr'
-import logo from '../assets/footerl.png'
-import { FaTiktok } from 'react-icons/fa'
-import img1 from "../assets/sall1.png"
-import { AiFillInstagram } from 'react-icons/ai'
-function Footer() {
+import {FaFacebookF, FaInstagram, FaTwitter} from 'react-icons/fa';
+const Footer = () => {
   return (
-    <Wrapper>
-      <div className='footer'>
-        <div className='section-center footer-container'>
-          <article className='footer-logo'>
-            <img src={logo} alt="rems' clamour" />
-            <p>
-              Soyez les premiers à être informés de nos nouveaux parfums, de nos
-              offres exclusives et de nos événements.
-            </p>
-            <div className='footer-links'>
-              <span>
-                <GrFacebookOption />
-              </span>
-              <span>
-                <AiFillInstagram />
-              </span>
-              <span>
-                <FaTiktok />
-              </span>
-            </div>
-          </article>
-          <article className='footer-link-contact'>
-            <h3>senegal fatick,ndouck 2</h3>
-            <h5>+2217750000000</h5>
-            <h5>+2217758022056</h5>
-          </article>
-          <article className='footer-img'>
-            <img src={img1} alt='' />
-          </article>
+    <footer className='footer'>
+      <div className='footer-content'>
+        <div className='footer-section'>
+          <h4>À Propos De Nous</h4>
+          <p>
+            Bienvenue sur notre site dédié à l'univers enchanteur des parfums.
+            Chez nous, nous croyons que les parfums sont bien plus que de
+            simples fragrances, ce sont des expressions personnelles de
+            l'élégance, de la confiance et de la beauté.
+          </p>
+        </div>
+        <div className='footer-section'>
+          <h4>Contactez Nous</h4>
+          <p>
+            Address: Senegal,Fk,Ndouck
+            <br />
+            Email: remsclamour@gmail.com
+            <br />
+            Phone:221775489633
+          </p>
+        </div>
+        <div className='footer-section'>
+          <h4>Suivez-nous</h4>
+
+          <div className='social-icons'>
+            <a
+              href='https://www.facebook.com'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <FaFacebookF />
+            </a>
+            <a
+              href='https://www.instagram.com'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href='https://www.twitter.com'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <FaTwitter />
+            </a>
+          </div>
         </div>
       </div>
-    </Wrapper>
+      <div className='footer-bottom'>
+        <p>
+          &copy; {new Date().getFullYear()} adamadiouf2017@gmail.com. All rights
+          reserved.
+        </p>
+      </div>
+    </footer>
   )
 }
-const Wrapper = styled.section`
-  .footer {
-    background: #000;
-    color: #fff;
-    padding: 1rem;
-    
-  }
-  .footer-logo p{
-    color:grey
-  } .footer-links {
-    margin-top: 2rem;
-  }
-  .footer-links span {
-    font-size: 1rem;
-    margin: 1rem;
-    padding: 1rem;
-    border: 1px solid grey;
-    border-radius: 50%;
-    color: var(--clr-primary-1);
-  }
-  .footer-link-contact {
-    margin-top: 3rem;
-  }
-  .footer-link-contact h3 {
-    font-size: 1.5rem;
-  }
-  .footer-link-contact h5 {
-    color: var(--clr-primary-1);
-  }
-  .footer-img img {
-    width: 5rem;
-    height: 5rem;
-    border: 1px solid var(--clr-primary-1);
-    border-radius: 50%;
-  }
-  @media screen and (min-width: 992px) {
-    .footer-container {
-      display: grid;
-      gap: 5rem;
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-`
+
 export default Footer
