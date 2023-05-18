@@ -7,7 +7,7 @@ import 'react-whatsapp-widget/dist/index.css'
 const WhatsAppButton = () => {
   return (
     <WhatsAppWidget
-      phoneNumber='+221777618072'
+      phoneNumber='+221775489633'
       message='Bonjour, comment puis-je vous aider ?'
     />
   )
